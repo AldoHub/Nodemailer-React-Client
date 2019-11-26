@@ -1,13 +1,119 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  margin: 0px;
+  padding: 0px;
+  background: rgb(238, 238, 238);
+  font-family: "Roboto";
+  color: #222;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.hero {
+  position: absolute;
+  right: 10%;
+  top: -120px;
+  width: 45%;
+  z-index: -1;
+  padding: 30px;
+}
+
+
+header {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+header div h1 {
+  font-size: 90px;
+  line-height: 90px;
+  padding-top: 120px;
+}
+
+header div h1::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 160px;
+  height: 4px;
+  width: 280px;
+  background:rgb(78, 65, 255);
+}
+
+header div p {
+  width: 40%;
+}
+
+form {
+  width: 70%;
+  margin: 320px auto 120px auto;
+  background: rgb(228, 228, 228);
+  padding: 40px;
+ 
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px 0px;
+  text-indent: 20px;
+  border: none;
+  display: block;
+  margin: 10px 0px;
+}
+form label {
+ font-weight: bold;
+}
+
+form input[type="file"]{
+  text-indent: 0px;
+} 
+
+form input[type="submit"]{
+  width: 300px;
+  margin: 20px 0px 20px auto;
+  background: rgb(78, 65, 255);
+  color: #eee;
+}
+
+.response {
+  width: 60%;
+  margin: 0 auto;
+  background: #222;
+  color: aliceblue;
+  padding: 10px;
+  position: relative;
+  bottom: 200px;
+  z-index: 2;
+  text-align: center;
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 40px 0px;
+  background: rgb(78, 65, 255);
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(78, 65, 255);
+  border-color: rgb(78, 65, 255) transparent rgb(78, 65, 255) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
